@@ -7,7 +7,7 @@ Wraps Google Prettify into a nice little bow for easy inclusion into any website
 # Directions
 
 1. copy the code in `reference.html` into your web page, at the end of the file right before `</body>`
-The end of your file should look like this:
+The end of your html template should look like this:
 ```html
 <!--
 ===================================================
@@ -27,6 +27,8 @@ The end of your file should look like this:
     End Google Prettify
 =================================================== 
 -->
+</body>
+</html>
 ```
 2. enjoy
 3. if you like, you can customize the theme by pointing the first line to a different CSS file
