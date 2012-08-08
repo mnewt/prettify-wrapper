@@ -2,38 +2,44 @@
 <html>
 <body>
 
-<h1>Code is below:</h1>
+<h1>There is some code below for demonstration purposes:</h1>
     
 <pre>
 <code>
-require 'rubygems'
-require 'typhoeus'
-require 'json'
+function addClass( classname, element ) {
+    var cn = element.className;
+    //test for existance
+    if( cn == "undefined" ) {
+        return;
+    }
+    //add a space if the element already has class
+    if( cn != '' ) {
+        classname = ' ' + classname;
+    }
+    element.className = cn + classname;
+}
 
-# the request object
-request = Typhoeus::Request.new("http://localhost:3000")
-                                # :body          => "this is a request body",
-                                # :method        => :post,
-                                # :headers       => {:Accept => "text/html"},
-                                # :timeout       => 100, # milliseconds
-                                # :cache_timeout => 60, # seconds
-                                # :params        => {:field1 => "a field"})
-# we can see from this that the first argument is the url. the second is a set of options.
-# the options are all optional. The default for :method is :get. Timeout is measured in milliseconds.
-# cache_timeout is measured in seconds.
 
-# Run the request via Hydra.
-hydra = Typhoeus::Hydra.new
-hydra.queue(request)
-hydra.run
+function styleCode()
+{
+  if (typeof disableStyleCode != "undefined") 
+  {
+    return;
+  }
+  var a = false;
+  // iterate through all <pre> tags and add "prettyprint" class
+  var matches = document.body.getElementsByTagName("pre");
+  for (var i = 0; i < matches.length; ++i)
+  {
+    addClass("prettyprint", matches[i]);
+    a = true;
+  }
+  if (a) { prettyPrint() } 
+}
 
-# the response object will be set after the request is run
-response = request.response
-response.code    # http status code
-response.time    # time in seconds the request took
-response.headers # the http headers
-response.headers_hash # http headers put into a hash
-response.body    # the response body
+
+
+window.onload = function() { styleCode(); };
 
 </code>
 </pre>
