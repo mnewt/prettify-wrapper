@@ -1,16 +1,11 @@
-function addClass( classname, element ) {
-    var cn = element.className;
-    //test for existance
-    if( cn == "undefined" ) {
-        return;
-    }
-    //add a space if the element already has class
-    if( cn != '' ) {
-        classname = ' ' + classname;
-    }
-    element.className = cn + classname;
+function hasClass(el, name) {
+   return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
 }
 
+function addClass(el, name)
+{
+   if (!hasClass(el, name)) { el.className += (el.className ? ' ' : '') +name; }
+}
 
 function styleCode()
 {
@@ -19,7 +14,6 @@ function styleCode()
     return;
   }
   var a = false;
-  // iterate through all <pre> tags and add "prettyprint" class
   var matches = document.body.getElementsByTagName("pre");
   for (var i = 0; i < matches.length; ++i)
   {
@@ -28,7 +22,6 @@ function styleCode()
   }
   if (a) { prettyPrint() } 
 }
-
 
 
 window.onload = function() { styleCode(); };

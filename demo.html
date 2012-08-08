@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>There is some code below for demonstration purposes:</h1>
+    
+<pre>
+<code>
+function addClass( classname, element ) {
+    var cn = element.className;
+    //test for existance
+    if( cn == "undefined" ) {
+        return;
+    }
+    //add a space if the element already has class
+    if( cn != '' ) {
+        classname = ' ' + classname;
+    }
+    element.className = cn + classname;
+}
+
+
+function styleCode()
+{
+  if (typeof disableStyleCode != "undefined") 
+  {
+    return;
+  }
+  var a = false;
+  // iterate through all "pre" tags and add "prettyprint" class
+  var matches = document.body.getElementsByTagName("pre");
+  for (var i = 0; i < matches.length; ++i)
+  {
+    addClass("prettyprint", matches[i]);
+    a = true;
+  }
+  if (a) { prettyPrint() } 
+}
+
+
+
+window.onload = function() { styleCode(); };
+
+</code>
+</pre>
+
+<!-- ======================= Begin Prettify ============================-->
+  <link href="http://raw.github.com/mnewt/prettify-wrapper/master/google-code-prettify-min/prettify.css"
+    type="text/css" rel="stylesheet"/>
+  <script 
+    src="http://raw.github.com/mnewt/prettify-wrapper/master/google-code-prettify-min/prettify.js" 
+    type="text/javascript"></script>
+  <script src="https://raw.github.com/mnewt/prettify-wrapper/master/styleCode.js" 
+    type="text/javascript"></script>
+<!-- ======================== End Prettify =============================-->
+
+</body>
+</html>

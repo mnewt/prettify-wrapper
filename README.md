@@ -11,14 +11,19 @@ The end of your html template should look like this:
 
 ```html
 <!-- ======================= Begin Prettify ============================-->
-  <link rel="stylesheet" href="google-code-prettify/src/prettify.css">
-  <script src="google-code-prettify-min/prettify.js" type="text/javascript"></script>
-  <script src="styleCode.js" type="text/javascript"></script>
+  <link rel="stylesheet" 
+    href="https://raw.github.com/mnewt/prettify-wrapper/master/google-code-prettify/src/prettify.css">
+  <script 
+    src="https://raw.github.com/mnewt/prettify-wrapper/master/google-code-prettify/src/prettify.js" 
+    type="text/javascript"></script>
+  <script src="https://raw.github.com/mnewt/prettify-wrapper/master/styleCode.js" 
+    type="text/javascript"></script>
 <!-- ======================== End Prettify =============================-->
 </body>
 </html>
 ```
 **TWO**: (optional): customize the theme by pointing the first line to a different CSS file, such as this one:
+https://raw.github.com/mnewt/prettify-wrapper/master/tomorrow-night-mnewt.css
 
 
 # Themes
@@ -26,5 +31,5 @@ The end of your html template should look like this:
 There are a few themes included in the package itself:
 http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html
 
-(https://github.com/jmblog)[jmblog] maintains some nice themes:
+[jmblog](https://github.com/jmblog) maintains some nice themes:
 http://jmblog.github.com/color-themes-for-google-code-prettify/
