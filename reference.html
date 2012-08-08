@@ -1,18 +1,48 @@
-<!--
-===================================================
-    Begin Google Prettify
-=================================================== 
--->
-  <link rel="stylesheet" 
-    href="http://jmblog.github.com/color-themes-for-google-code-prettify/css/themes/tomorrow-night.css">
+<!DOCTYPE html>
+<html>
+<body>
 
-  <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"
-    type="text/javascript"></script>
+<h1>Code is below:</h1>
+    
+<pre>
+<code>
+require 'rubygems'
+require 'typhoeus'
+require 'json'
 
-  <script src="https://raw.github.com/mnewt/google-prettify-wrapper/master/styleCode.js"
-    type="text/javascript"></script>
-<!--
-===================================================
-    End Google Prettify
-=================================================== 
--->
+# the request object
+request = Typhoeus::Request.new("http://localhost:3000")
+                                # :body          => "this is a request body",
+                                # :method        => :post,
+                                # :headers       => {:Accept => "text/html"},
+                                # :timeout       => 100, # milliseconds
+                                # :cache_timeout => 60, # seconds
+                                # :params        => {:field1 => "a field"})
+# we can see from this that the first argument is the url. the second is a set of options.
+# the options are all optional. The default for :method is :get. Timeout is measured in milliseconds.
+# cache_timeout is measured in seconds.
+
+# Run the request via Hydra.
+hydra = Typhoeus::Hydra.new
+hydra.queue(request)
+hydra.run
+
+# the response object will be set after the request is run
+response = request.response
+response.code    # http status code
+response.time    # time in seconds the request took
+response.headers # the http headers
+response.headers_hash # http headers put into a hash
+response.body    # the response body
+
+</code>
+</pre>
+
+<!-- ======================= Begin Prettify ============================-->
+  <link rel="stylesheet" href="google-code-prettify/src/prettify.css">
+  <script src="google-code-prettify-min/prettify.js" type="text/javascript"></script>
+  <script src="styleCode.js" type="text/javascript"></script>
+<!-- ======================== End Prettify =============================-->
+
+</body>
+</html>
