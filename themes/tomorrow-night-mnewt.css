@@ -102,8 +102,8 @@ pre.prettyprint {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 12px;
   line-height: 1.5;
-  /* border: 1px solid #ccc; */
-  border: 0px solid #ccc; 
+  border: 1px solid #ccc;
+  text-shadow: 0px;
   padding: 10px; }
 
 /* Specify class=linenums on a pre to get line numbering */
