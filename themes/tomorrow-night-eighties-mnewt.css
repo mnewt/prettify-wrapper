@@ -99,7 +99,7 @@ pre.prettyprint {
   background: #2d2d2d;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 12px;
-  border: 0px;
+  border: 0px solid #ccc; 
   line-height: 1.5;
   padding: 10px; }
 
