@@ -38,7 +38,8 @@ http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html
 [jmblog](https://github.com/jmblog) maintains some nice themes:
 http://jmblog.github.com/color-themes-for-google-code-prettify/
 
-Lastly, here are some themes I'm hosting. They are slightly modified versions of the ones found above.
+Lastly, here are some themes hosted here. They are slightly modified versions of the ones found above.
+ * http://mnewt.github.com/prettify-wrapper/themes/prettify.css
  * http://mnewt.github.com/prettify-wrapper/themes/tomorrow-mnewt.css
  * http://mnewt.github.com/prettify-wrapper/themes/tomorrow-night-mnewt.css
  * http://mnewt.github.com/prettify-wrapper/themes/tomorrow-night-eighties-mnewt.css

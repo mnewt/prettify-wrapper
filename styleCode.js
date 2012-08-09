@@ -17,7 +17,7 @@ function styleCode()
   var matches = document.body.getElementsByTagName("pre");
   for (var i = 0; i < matches.length; ++i)
   {
-    addClass("prettyprint", matches[i]);
+    addClass(matches[i], "prettyprint");
     a = true;
   }
   if (a) { prettyPrint() } 
