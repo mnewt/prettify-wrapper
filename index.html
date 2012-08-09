@@ -21,10 +21,6 @@
           <h1 id="project_title">Prettify-wrapper</h1>
           <h2 id="project_tagline">Wraps Google Prettify into a nice little bow for easy inclusion into any website or blog</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/mnewt/prettify-wrapper/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/mnewt/prettify-wrapper/tarball/master">Download this project as a tar.gz file</a>
-            </section>
         </header>
     </div>
 
@@ -37,21 +33,19 @@
 
 <h1>Directions</h1>
 
-<p><strong>ONE</strong>: copy the code in <code>reference.html</code> into your web page, at the end of the file right before <code>&lt;/body&gt;</code>
+<p><strong>ONE</strong>: copy the code in below into your web page, at the end of the file right before <code>&lt;/body&gt;</code>
 The end of your html template should look like this:</p>
 
-<div class="highlight"><pre><span class="c">&lt;!-- ======================= Begin Prettify ============================--&gt;</span>
-  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span>
-    <span class="na">href=</span><span class="s">"http://mnewt.github.com/prettify-wrapper/themes/tomorrow-mnewt.css"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span>
-    <span class="na">src=</span><span class="s">"https://raw.github.com/mnewt/prettify-wrapper/master/google-code-prettify/src/prettify.js"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://raw.github.com/mnewt/prettify-wrapper/master/styleCode.js"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/script&gt;</span>
-<span class="c">&lt;!-- ======================== End Prettify =============================--&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
+<pre><code>&lt;!-- ======================= Begin Prettify ============================--&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;
+    href=&quot;http://mnewt.github.com/prettify-wrapper/themes/prettify.css&quot;&gt;
+  &lt;script type=&quot;text/javascript&quot;
+    src=&quot;http://mnewt.github.com/prettify-wrapper/google-code-prettify/src/prettify.js&quot;&gt;
+    &lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;
+    src=&quot;http://mnewt.github.com/prettify-wrapper/styleCode.js&quot;&gt;&lt;/script&gt;
+&lt;!-- ======================== End Prettify =============================--&gt;
+</code></pre>
 
 <p><strong>TWO</strong>: (optional): customize the theme by pointing the first line to a different CSS file, such as this one:
 <a href="https://raw.github.com/mnewt/prettify-wrapper/master/tomorrow-night-mnewt.css">https://raw.github.com/mnewt/prettify-wrapper/master/tomorrow-night-mnewt.css</a></p>
@@ -95,6 +89,15 @@ The end of your html template should look like this:</p>
             } catch(err) {}
           </script>
 
+<!-- ======================= Begin Prettify ============================-->
+  <link rel="stylesheet" type="text/css" rel="stylesheet"
+    href="http://mnewt.github.com/prettify-wrapper/themes/prettify.css">
+  <script type="text/javascript"
+    src="http://mnewt.github.com/prettify-wrapper/google-code-prettify/src/prettify.js">
+    </script>
+  <script type="text/javascript"
+    src="http://mnewt.github.com/prettify-wrapper/styleCode.js"></script>
+<!-- ======================== End Prettify =============================-->
 
   </body>
 </html>
