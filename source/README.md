@@ -12,11 +12,7 @@ The end of your html template should look like this:
 ```html
 <!-- ======================= Begin Prettify ============================-->
   <link rel="stylesheet" type="text/css" rel="stylesheet"
-<<<<<<< HEAD
-    href="http://mnewt.github.com/prettify-wrapper/prettify.css">
-=======
     href="http://mnewt.github.com/prettify-wrapper/tomorrow-mnewt.css">
->>>>>>> gh-pages
   <script type="text/javascript"
     src="https://raw.github.com/mnewt/prettify-wrapper/master/google-code-prettify/src/prettify.js">
     </script>
