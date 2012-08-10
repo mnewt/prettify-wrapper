@@ -2,8 +2,10 @@
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
 /* Pretty printing styles. Used with prettify.js. */
 /* SPAN elements with the classes below are added by prettyprint. */
-/* plain text */
+/* source: http://jmblog.github.com/color-themes-for-google-code-prettify */
+/* modified to work with http://github.mnewton.com/prettify-wrapper */
 
+/* plain text */
 .pln {
   color: #c5c8c6; }
 
@@ -96,11 +98,12 @@
   .atv {
     color: #060; } }
 /* Style */
-pre.prettyprint {
+pre.prettyprint, code.prettyprint {
   background: #1d1f21;
   /* font-family: Menlo, Monaco, Consolas, monospace; */
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 12px;
+  font-weight: bold;
   line-height: 1.5;
   border: 1px solid #ccc;
   text-shadow: 0px;

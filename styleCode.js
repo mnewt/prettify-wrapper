@@ -14,7 +14,8 @@ function styleCode()
     return;
   }
   var a = false;
-  var matches = document.body.getElementsByTagName("pre");
+  //var matches = document.body.getElementsByTagName("pre", "code");
+  var matches = document.querySelectorAll("pre, code");
   for (var i = 0; i < matches.length; ++i)
   {
     addClass(matches[i], "prettyprint");

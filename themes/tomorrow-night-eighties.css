@@ -2,6 +2,9 @@
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
 /* Pretty printing styles. Used with prettify.js. */
 /* SPAN elements with the classes below are added by prettyprint. */
+/* source: http://jmblog.github.com/color-themes-for-google-code-prettify */
+/* modified to work with http://github.mnewton.com/prettify-wrapper */
+
 /* plain text */
 .pln {
   color: #cccccc; }
@@ -17,7 +20,8 @@
 
   /* a comment */
   .com {
-    color: #999999; }
+    color: #999999; 
+    font: inherit; }
 
   /* a type name */
   .typ {
@@ -95,14 +99,16 @@
   .atv {
     color: #060; } }
 /* Style */
-pre.prettyprint {
+pre.prettyprint, code.prettyprint {
   background: #2d2d2d;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 12px;
-  border: 1px solid #ccc; 
-  text-shadow: 0px;
+  font-weight: bold;
+  border: 1px solid #2d2d2d;
+  text-shadow: 1px;
   line-height: 1.5;
-  padding: 10px; }
+  padding: 10px; 
+  }
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
