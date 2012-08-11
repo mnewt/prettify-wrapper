@@ -15,7 +15,6 @@ function styleCode()
   }
   var  preMatches = document.body.getElementsByTagName("pre");
   var codeMatches = document.body.getElementsByTagName("code");
-  /* var matches = document.querySelectorAll("pre, code"); */
   if (preMatches.length || codeMatches.length) {
     for (var i = 0; i <  preMatches.length; ++i) { addClass( preMatches[i], "prettyprint"); }
     for (var i = 0; i < codeMatches.length; ++i) { addClass(codeMatches[i], "prettyprint"); }
