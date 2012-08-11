@@ -28,44 +28,46 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>google-code-prettify wrapper</h1>
-
-<p>This repository serves up google prettify. It allows you to add code highlighting to any page without hosting any files. It has no external dependencies--just pure javascript.</p>
-
+<p>This repository provides a quick and clean way to add code syntax highlighting to any web page. You do not need to host any files to do so. It has no external dependencies and is written in pure javascript. It should work on any blog platform, such as WordPress, Tumblr, or Blogger.</p>
+<h1>Problem</h1>
+<p>What problem are we trying to fix exactly? </p>
+<p>We want to color highlight the syntax of any text in a code block without modifying our html. Google Code Prettify does a great job of highlighting any syntax enclosed in a block with the "prettyprint"
+ class (i.e. <span class="backtick">&lt;pre class="prettyprint"&gt;</span>). However, we want it to highlight syntax in ANY <span class="backtick">&lt;pre&gt;</span> block. That way you don't have to mess with updating your html every time you make a new code block.</p>
+<p>Furthermore, since this needs to drop into an html document that presumably already has CSS defined for <span class="backtick">&lt;pre&gt;</span> and/or <span class="backtick">&lt;code&gt;</span> elements, we need to take special care to override such code, lest we do all this work for naught or--worse--use some CSS styles from the parent document and some defined here. To be honest though, I'm sure you will still have that problem on some sites. If you encounter such issues and manage to solve them, please send me a pull request and I'll add your new or modified theme.</p>
+<h1>Solution</h1>
+<p>While we could modify Google Code Prettify, this is not a clean and maintainable solution. So instead, we have a small wrapper javascript that you can include in your html (probably in your blog's template) that automatically adds the "prettyprint" class to all <span class="backtick">&lt;pre&gt;</span> and <span class="backtick">&lt;code&gt;</span> tags.</p>
 <h1>Directions</h1>
-
-<p><strong>ONE</strong>: copy the code in below into your web page, at the end of the file right before <code>&lt;/body&gt;</code>
+<h3>STEP ONE:</h3>
+<p>Copy the code in below into your web page, at the end of the file right before <span class="backtick">&lt;/body&gt;</span>.
 The end of your html template should look like this:</p>
-
 <pre><code>&lt;!-- ======================= Begin Prettify ============================--&gt;
-  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;
-    href=&quot;http://github.mnewton.com/prettify-wrapper/themes/prettify.css&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;
-    src=&quot;http://github.mnewton.com/prettify-wrapper/google-code-prettify/src/prettify.js&quot;&gt;
+  &lt;link rel="stylesheet" type="text/css" rel="stylesheet"
+    href="http://github.mnewton.com/prettify-wrapper/themes/prettify.css"&gt;
+  &lt;script type="text/javascript"
+    src="http://github.mnewton.com/prettify-wrapper/google-code-prettify/src/prettify.js"&gt;
     &lt;/script&gt;
-  &lt;script type=&quot;text/javascript&quot;
-    src=&quot;http://github.mnewton.com/prettify-wrapper/styleCode.js&quot;&gt;&lt;/script&gt;
+  &lt;script type="text/javascript"
+    src="http://github.mnewton.com/prettify-wrapper/styleCode.js"&gt;&lt;/script&gt;
 &lt;!-- ======================== End Prettify =============================--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-
-<p><strong>TWO</strong>: (optional): customize the theme by pointing the first line to a different CSS file, such as this one:
-<a href="https://raw.github.com/mnewt/prettify-wrapper/master/tomorrow-night-mnewt.css">https://raw.github.com/mnewt/prettify-wrapper/master/tomorrow-night-mnewt.css</a></p>
-
+<h3>STEP TWO (optional:)</h3>
+<p>Customize the theme by pointing the first line to a different CSS file, such as this one:
+<a href="http://github.mnewton.com/prettify-wrapper/themes/prettify.css">http://github.mnewton.com/prettify-wrapper/themes/prettify.css</a></p>
 <h1>Themes</h1>
-
-<p>There are a few themes included in the package itself:
-<a href="http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html">http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html</a></p>
-
-<p><a href="https://github.com/jmblog">jmblog</a> maintains some nice themes:
-<a href="http://jmblog.github.com/color-themes-for-google-code-prettify/">http://jmblog.github.com/color-themes-for-google-code-prettify/</a></p>
-
-<p>Lastly, here are some themes hosted here. They are slightly modified versions of the ones found above.
+<p>There are a few themes included in the google-code-prettify package itself:</p>
 <ul>
- <li> <a href="http://mnewt.github.com/prettify-wrapper/themes/prettify.css">http://mnewt.github.com/prettify-wrapper/themes/tomorrow-mnewt.css</a> (this is the default theme, minified)</li>
- <li> <a href="http://mnewt.github.com/prettify-wrapper/themes/tomorrow-mnewt.css">http://mnewt.github.com/prettify-wrapper/themes/tomorrow-mnewt.css</a></li>
- <li> <a href="http://mnewt.github.com/prettify-wrapper/themes/tomorrow-night-mnewt.css">http://mnewt.github.com/prettify-wrapper/themes/tomorrow-night-mnewt.css</a></li>
- <li> <a href="http://mnewt.github.com/prettify-wrapper/themes/tomorrow-night-eighties-mnewt.css">http://mnewt.github.com/prettify-wrapper/themes/tomorrow-night-eighties-mnewt.css</a></li>
+<li><a href="http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html">http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html</a></li>
 </ul>
-</p>
+<p><a href="https://github.com/jmblog">jmblog</a> maintains some nice themes:</p>
+<ul>
+<li><a href="http://jmblog.github.com/color-themes-for-google-code-prettify/">http://jmblog.github.com/color-themes-for-google-code-prettify/</a></li>
+</ul>
+<p>Lastly, there are some themes hosted here. They are mostly slightly modified versions of the ones found above. Check them out at:</p>
+<ul>
+<li><a href="https://github.com/mnewt/prettify-wrapper/tree/master/themes">https://github.com/mnewt/prettify-wrapper/tree/master/themes</a></li>
+</ul>
 
       </section>
     </div>
