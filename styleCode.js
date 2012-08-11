@@ -13,15 +13,14 @@ function styleCode()
   {
     return;
   }
-  var a = false;
-  //var matches = document.body.getElementsByTagName("pre", "code");
-  var matches = document.querySelectorAll("pre, code");
-  for (var i = 0; i < matches.length; ++i)
-  {
-    addClass(matches[i], "prettyprint");
-    a = true;
+  var  preMatches = document.body.getElementsByTagName("pre");
+  var codeMatches = document.body.getElementsByTagName("code");
+  /* var matches = document.querySelectorAll("pre, code"); */
+  if (preMatches.length || codeMatches.length) {
+    for (var i = 0; i <  preMatches.length; ++i) { addClass( preMatches[i], "prettyprint"); }
+    for (var i = 0; i < codeMatches.length; ++i) { addClass(codeMatches[i], "prettyprint"); }
+    prettyPrint()
   }
-  if (a) { prettyPrint() } 
 }
 
 
