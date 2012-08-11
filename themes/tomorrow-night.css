@@ -100,14 +100,16 @@
 /* Style */
 pre.prettyprint, code.prettyprint {
   background: #1d1f21;
-  /* font-family: Menlo, Monaco, Consolas, monospace; */
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 12px;
-  font-weight: bold;
-  line-height: 1.5;
+  text-shadow: 0 1px #1d1f21;
+  line-height: 1.5; }
+pre.prettyprint {
   border: 1px solid #ccc;
-  text-shadow: 0px;
   padding: 10px; }
+code.prettyprint {
+  padding: 2px;
+}
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {

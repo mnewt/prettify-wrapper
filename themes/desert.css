@@ -1,7 +1,11 @@
 /* desert scheme ported from vim to google prettify */
 /* modified to work with http://github.mnewton.com/prettify-wrapper */
 
-pre.prettyprint, code.prettyprint { display: block; background-color: #333 }
+pre.prettyprint, code.prettyprint { 
+  padding: 5px;
+  border-width: 0 0 0 0px !important; }
+
+pre.prettyprint { display: block; text-shadow: 0 0px #333; }
 pre .nocode { background-color: none; color: #000 }
 pre .str { color: #ffa0a0 } /* string  - pink */
 pre .kwd { color: #f0e68c; font-weight: bold }
