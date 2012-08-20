@@ -24,13 +24,10 @@ The end of your html template should look like this:
 
 
     <!-- ======================= Begin Prettify ============================-->
-      <link rel="stylesheet" type="text/css" rel="stylesheet"
+      <link rel="stylesheet" type="text/css"
         href="http://github.mnewton.com/prettify-wrapper/themes/prettify.css">
       <script type="text/javascript"
-        src="http://github.mnewton.com/prettify-wrapper/google-code-prettify/src/prettify.js">
-        </script>
-      <script type="text/javascript"
-        src="http://github.mnewton.com/prettify-wrapper/styleCode.js"></script>
+        src="http://github.mnewton.com/prettify-wrapper/wrapper.min.js"></script>
     <!-- ======================== End Prettify =============================-->
     </body>
     </html>
