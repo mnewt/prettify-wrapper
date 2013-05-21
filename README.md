@@ -25,16 +25,16 @@ The end of your html template should look like this:
 
     <!-- ======================= Begin Prettify ============================-->
       <link rel="stylesheet" type="text/css"
-        href="http://github.mnewton.com/prettify-wrapper/themes/prettify.css">
+        href="http://www.mnewton.com/prettify-wrapper/themes/prettify.css">
       <script type="text/javascript"
-        src="http://github.mnewton.com/prettify-wrapper/wrapper.min.js"></script>
+        src="http://www.mnewton.com/prettify-wrapper/wrapper.min.js"></script>
     <!-- ======================== End Prettify =============================-->
     </body>
     </html>
 
 ###STEP TWO (optional:)
 Customize the theme by pointing the first line to a different CSS file, such as this one:
-[http://github.mnewton.com/prettify-wrapper/themes/prettify.css](http://github.mnewton.com/prettify-wrapper/themes/prettify.css)
+[http://www.mnewton.com/prettify-wrapper/themes/prettify.css](http://www.mnewton.com/prettify-wrapper/themes/prettify.css)
 
 
 # Themes

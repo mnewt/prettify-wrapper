@@ -1,6 +1,6 @@
 /* Pretty printing styles. Used with prettify.js. */
 /* Vim sunburst theme by David Leibovic */
-/* modified to work with http://github.mnewton.com/prettify-wrapper */
+/* modified to work with http://www.mnewton.com/prettify-wrapper */
 
 pre .str, code .str { color: #65B042; } /* string  - green */
 pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
